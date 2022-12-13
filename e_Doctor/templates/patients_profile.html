@@ -1,0 +1,88 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>
+   {% block title %}
+
+   {% endblock title %}
+
+   </title>
+  <style>
+body {
+height: 125vh;
+margin-top: 80px;
+padding: 30px;
+background-size: cover;
+font-family: sans-serif;
+background-color: #F0F8FF;
+}
+}
+input[type=text] {
+  width: 100%;
+  padding: 12px 20px;
+  margin: 8px 0;
+  box-sizing: border-box;
+}
+
+header {
+background-color: #B0E0E6;
+position: fixed;
+left: 0;
+right: 0;
+top: 1px;
+height: 50px;
+display: flex;
+
+align-items: center;
+box-shadow: 0 0 25px 0 	#008080;
+}
+header * {
+display: inline;
+}
+
+header li {
+margin: 20px;
+}
+
+header li a {
+color: black;
+text-decoration: none;
+}
+button {
+  background-color: #5F9EA0;
+  color: white;
+  padding: 14px 20px;
+  margin: 8px 0;
+  border: none;
+  cursor: pointer;
+  width: 100%;
+}
+
+button:hover
+{
+  opacity: 0.8;
+}
+.container {
+  padding: 16px;
+}
+</style>
+  <title>
+
+  </title>
+</head>
+    <body>
+<header>
+<div class="topnav">
+<ul>
+    <li><a class="active" href="{% url 'patients_info' %}">Update Profile</a></li>
+    <li><a class="active" href="{% url 'patients_prev_rec' %}">Previous Records</a></li>
+    <li><a class="active" href="{% url 'available_specialists' %}">Available Specialists</a></li>
+    <li><a class="active" href="{% url 'logout' %}">Log out</a></li>
+    <li><a class="active" href="{% url 'homepage' %}">Back to Home</a></li>
+</ul>
+</div>
+</header>
+
+  </body>
+</html>

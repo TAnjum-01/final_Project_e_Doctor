@@ -1,0 +1,19 @@
+{% block title %}
+Patient Info
+{% endblock title %}
+
+{% block content %}
+<div class="container">
+    <div class="row">
+        <div class="col-md-12">
+            <h1>Patient Info</h1>
+            {% for data in form %}
+                {{data.name}}
+                {{data.age}}
+                {{data.email}}
+            {% endfor %}
+        </div>
+    </div>
+</div>
+
+{% endblock content %}

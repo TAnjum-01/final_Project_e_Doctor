@@ -1,0 +1,130 @@
+<!DOCTYPE html>
+{% load crispy_forms_tags %}
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Patient</title>
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<style>
+
+
+body {
+height: 125vh;
+margin-top: 80px;
+padding: 30px;
+background-size: cover;
+font-family: sans-serif;
+background-color: #F0F8FF;
+}
+}
+input[type=text] {
+  width: 100%;
+  padding: 12px 20px;
+  margin: 8px 0;
+  box-sizing: border-box;
+}
+
+header {
+background-color: #B0E0E6;
+position: fixed;
+left: 0;
+right: 0;
+top: 1px;
+height: 50px;
+display: flex;
+
+align-items: center;
+box-shadow: 0 0 25px 0 	#008080;
+}
+header * {
+display: inline;
+}
+
+header li {
+margin: 20px;
+}
+
+header li a {
+color: black;
+text-decoration: none;
+}
+button {
+  background-color: #5F9EA0;
+  color: white;
+  padding: 14px 20px;
+  margin: 8px 0;
+  border: none;
+  cursor: pointer;
+  width: 100%;
+}
+
+button:hover
+{
+  opacity: 0.8;
+}
+
+.cancelbtn
+{
+  width: auto;
+  padding: 10px 18px;
+  background-color: #f44336;
+}
+
+.imgcontainer
+{
+  text-align: center;
+  margin: 24px 0 12px 0;
+}
+
+img.avatar {
+  width: 40%;
+  border-radius: 50%;
+}
+
+.container {
+  padding: 16px;
+}
+
+span.psw {
+  float: right;
+  padding-top: 16px;
+}
+
+/* Change styles for span and cancel button on extra small screens */
+@media screen and (max-width: 300px) {
+  span.psw {
+     display: block;
+     float: none;
+  }
+  .cancelbtn {
+     width: 100%;
+  }
+}
+
+</style>
+</head>
+
+<body>
+
+Update Your Profile
+<header>
+<div class="topnav">
+<ul>
+<li><a class="active" href="{% url 'patients_profile' %}">Previous page</a></li>
+<li><a class="active" href="{% url 'logout' %}">Logout</a></li>
+<li> <a class="active" href="{% url 'homepage' %}">Back to Home</a></li>
+</ul>
+</div>
+</header>
+<form method = "POST">
+    <fieldset>
+        {% csrf_token %}
+     {{ patient_form | crispy }}
+    </fieldset>
+    <button>
+        Submit
+    </button>
+</form>
+
+</body>
+</html>

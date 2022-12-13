@@ -1,0 +1,19 @@
+
+{% block title %}
+
+{% endblock title %}
+
+{% block content %}
+
+<h1>Set Patient's Appointment</h1>
+<div class="container">
+    <label for="did"><b>Doctor's Id:</b></label>
+    <input type="text" placeholder="Enter Doctor's Id" name="did" required><br>
+
+   <label for="pid"><b>Patient's Id:</b></label>
+    <input type="text" placeholder="Enter Patient's Id" name="pid" required><br>
+
+    <button type="submit"><a href="{% url 'meet_patient' %}">Login</a></button>
+    <button type="submit"><a href="{% url 'homepage' %}">Log out</a></button>
+    <label>
+{% endblock content %}
