@@ -19,7 +19,7 @@ import django.contrib.auth.views as auth_views
 import e_Doctor.views
 import doctor.views as doctor_views
 import patient.views as patient_views
-
+import prescription.views as prescription_views
 
 urlpatterns = [
     path('admin/', admin.site.urls),
@@ -36,8 +36,9 @@ urlpatterns = [
     path('patients_prev_rec/', e_Doctor.views.patients_prev_rec, name='patients_prev_rec'),
     path('login/', auth_views.LoginView.as_view(template_name='login.html'), name='login'),
     path("logout/", auth_views.LogoutView.as_view(template_name='logout.html'), name='logout'),
-
     path('doctors_info/', doctor_views.doctor, name='doctors_info'),
     path('patients_info/', patient_views.patient, name='patients_info'),
+    path('prescription/', prescription_views.prescription, name='prescription'),
+
 
 ]

@@ -140,3 +140,4 @@ DEFAULT = '/accounts/login/'
 
 EMAIL_BACKEND = 'django.core.mail.backends.console.EmailBackend'
 
+CRISPY_TEMPLATE_PACK = 'bootstrap4'

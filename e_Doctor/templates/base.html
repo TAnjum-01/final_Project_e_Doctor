@@ -57,14 +57,15 @@ text-decoration: none;
 <Body>
 
 <header>
- <p class="topnav">
+ <div class="topnav">
 <ul>
+<li><a class="active" href="{% url 'homepage' %}">Home</a></li>
 <li><a class="active" href="{% url 'about_us' %}">ⲉ_Doctor</a></li>
 <li><a class="active" href="{% url 'contact_us' %}"> Contact Us</a></li>
 <li><a class="active" href="{% url 'terms_&_conditions' %}"> Terms & Conditions </a></li>
 <li> <a class="active" href="{% url 'login' %}">Log in/Sign up</a></li>
 </ul>
-<p class="topnav">
+</div>
 </header>
 <div style="padding-left:16px">
   {% block content %}
